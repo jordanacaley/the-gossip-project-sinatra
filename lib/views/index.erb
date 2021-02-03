@@ -4,6 +4,13 @@
   </head>
   <body>
     <h1>My awesome gossip site, from the views folder!</h1>
-    <p>Welcome! Our list of gossip is coming soon. In the meantime, you can <a href="/gossips/new/">create your own gossip</a>!</p>
+    <p>Welcome! Here is our list of gossip</p>
+    <% gossips.each do |gossip| %>
+      <p>
+        <%= gossip.author %><br/>
+        <%= gossip.content %>
+      </p>
+    <% end %>
+    <p>Want to add to this list? You can <a href="/gossips/new/">create your own gossip</a>!</p>
   </body>
 </html>
