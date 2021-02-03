@@ -1,3 +1,4 @@
+require 'gossip'
 
 class ApplicationController < Sinatra::Base
   get '/' do
@@ -9,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/gossips/new/' do
-    Gossip.new(the_gossip_entries).save
+    Gossip.new("super_author", "super gossip").save
   end
 
 end
