@@ -23,4 +23,9 @@ class Gossip
     return all_gossips
   end
 
+  def self.find(id)
+    table = CSV.read("./db/gossip.csv")
+    return table[id - 1]
+  end
+
 end
