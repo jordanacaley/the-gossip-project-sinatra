@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Edit Gossip #<%= gossip_number %></title>
+  </head>
+  <body>
+    <h1>Edit Gossip #<%= gossip_number %></h1>
+    <p>Update the gossip in the form below</p>
+    <form action='/gossips/<%= gossip_number %>/edit/' method='POST'>
+      Number of gossip to edit: <input type='text' name='id'/><br/>
+      Enter your name here: <input type='text' name='gossip_author'/><br/>
+      Enter your gossip: <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>

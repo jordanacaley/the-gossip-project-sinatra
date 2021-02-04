@@ -1,0 +1,1 @@
+This project uses Sinatra to create a web app for viewing, adding and editing gossip.

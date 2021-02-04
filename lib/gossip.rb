@@ -9,6 +9,24 @@ class Gossip
     @author = author
   end
 
+  def self.update(id, author, content)
+    rows_array = CSV.read('./db/gossip.csv')
+
+    desired_indices = [id - 1].sort # rows to modify
+    rows_array.each.with_index(desired_indices[0]) do |row, index| 
+      if desired_indices.include?(index)
+
+        # modify content
+        rows_array[index][0] = author
+        rows_array[index][1] = content
+
+      end
+    end
+
+    # update CSV file
+    CSV.open('./db/gossip.csv', 'wb') { |csv| rows_array.each{|row| csv << row}}
+  end
+  
   def save
     CSV.open("./db/gossip.csv", "ab") do |csv|
       csv << [author, content]
