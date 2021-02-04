@@ -1,3 +1,5 @@
+# The Gossip Project with Sinatra
+
 This project uses Sinatra to create a Ruby web app for viewing, adding and editing gossip.
 
 1. Download the code
